@@ -33,7 +33,7 @@ const LoveLetter = () => {
                <img src={heart} alt="" className="w-full h-auto" />
              </motion.div>
 
-      <div className="flex-1 flex flex-col items-center translate-y-[40px] md:translate-y-20">
+      <div className="flex-1 flex flex-col items-center translate-y-[40px] md:translate-y-[40px]">
         <AnimatePresence mode="wait">
           {!showLetter ? (
             <motion.div
