@@ -1,26 +1,27 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+/* eslint-disable no-unused-vars */
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import heart from "../src/assets/hearticon.png"; // Import the heart logo
 
 const RomanticPlaylist = () => {
   return (
     <div className="bg-[#F1DCDE] h-screen flex flex-col  overflow-hidden relative   px-4">
       {/* Logo at the top */}
-     <motion.div 
-                    className="w-[100px] md:w-[150px] py-8 self-start ml-2 md:ml-4 relative overflow-hidden"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
-                  >
-                    <motion.div
-                      className="absolute inset-0 bg-[#F1DCDE]"
-                      initial={{ x: 0 }}
-                      animate={{ x: "100%" }}
-                      transition={{ duration: 1.5, ease: "easeInOut" }}
-                    />
-                    <img src={heart} alt="" className="w-full h-auto" />
-                  </motion.div>
+      <motion.div
+        className="w-[100px] md:w-[150px] py-8 self-start ml-2 md:ml-4 relative overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <motion.div
+          className="absolute inset-0 bg-[#F1DCDE]"
+          initial={{ x: 0 }}
+          animate={{ x: "100%" }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+        />
+        <img src={heart} alt="" className="w-full h-auto" />
+      </motion.div>
 
       {/* Title */}
       <motion.div
@@ -40,10 +41,11 @@ const RomanticPlaylist = () => {
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
+        style={{ height: "auto" }} // Ensure the parent container can grow
       >
         <iframe
-          className="w-full h-50 md:h-96 rounded-lg"
-          src="https://open.spotify.com/embed/playlist/2L2KlutO6uv1MGojk7IRtL?utm_source=generator" // Lana Del Rey playlist
+          className="w-full h-90 md:h-96 rounded-lg"
+          src="https://open.spotify.com/embed/playlist/2L2KlutO6uv1MGojk7IRtL?utm_source=generator"
           frameBorder="0"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
@@ -53,7 +55,7 @@ const RomanticPlaylist = () => {
 
       {/* Surprise Letter Button and Quote */}
       <motion.div
-        className="mt-6 md:mt-8 flex flex-col items-center gap-4"
+        className="mt-4 md:mt-8 flex flex-col items-center gap-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}

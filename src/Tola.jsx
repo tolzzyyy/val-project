@@ -1,4 +1,5 @@
-import React from 'react'
+/* eslint-disable no-unused-vars */
+import  * as React from 'react'
 import { Link } from 'react-router-dom'
 
 const Tola = () => {
